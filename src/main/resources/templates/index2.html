@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<h1 th:text="#{content.title}">Helo Page</h1>
+	<p th:text="|expression[ ${check} ]|"></p>
+	<table th:object="${data.get(__${check}__)}">
+		<tr><td th:text="*{id}"></td></tr>
+		<tr><td th:text="*{name}"></td></tr>
+		<tr><td th:text="*{value}"></td></tr>
+	</table>
+</body> 
+</html>
